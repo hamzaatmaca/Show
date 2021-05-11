@@ -1,0 +1,84 @@
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	background: black
+}
+#container{
+	width: 50%;
+	height: 100vh;
+	overflow: hidden;
+	margin-top: 0.2rem;
+
+	
+}
+#slide{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+	min-height: 100%;
+}
+#slide img{
+	max-width: 95%;
+	border-radius: 5%;
+	position: absolute;
+	box-shadow: 1px 1px 7px grey
+}
+#prevBtn,#nextBtn{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border:none;
+	outline: none;
+	cursor: pointer;
+	background: orangered;
+	color: white;
+	font-size: 30px;
+	font-family: sans-serif;
+	transition: .45s;
+	opacity: 0.4;
+
+}
+#prevBtn:focus,#nextBtn:focus{
+	outline: none;
+	border:none;
+}
+#prevBtn:hover,#nextBtn:hover{
+	background: yellow;
+	border:2px solid orange;
+	color:red;
+	opacity: 1;
+	transform: rotate(1080deg);
+	box-shadow: 1px 1px 20px red;
+	font-size: 20px;
+
+}
+#prevBtn{
+	right: 68%;
+}
+#nextBtn{
+	left: 68%;
+}
+@media only screen and (max-width: 999px){
+	#container{
+		width: 90%;
+	}
+	#prevBtn{
+	right: 80%;
+	}
+	#nextBtn{
+		left: 80%;
+	}
+}
